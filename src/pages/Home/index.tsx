@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { Form, Input } from '@rocketseat/unform';
-import { Card, CardTitle, CardBody, Button } from './styles';
+import { Card, CardTitle, CardSubtitle, CardBody, Button } from './styles';
 import history from '../../services/history';
 import api from '../../services/api';
 
 const schema = Yup.object().shape({
-  search: Yup.string().required('Input seach is required'),
+  search: Yup.string().required('Input search is required'),
 });
 
 const Home: React.FC = () => {
@@ -18,6 +18,7 @@ const Home: React.FC = () => {
     const response = await api.get('search/anime', {
       params: {
         q: search,
+        limit: 10,
         page: 1,
       },
     });
@@ -31,6 +32,9 @@ const Home: React.FC = () => {
     <Card>
       <CardBody>
         <CardTitle>anisearch</CardTitle>
+        <CardSubtitle>
+          search for information about your favorite anime
+        </CardSubtitle>
         <Form schema={schema} onSubmit={handleSubmit}>
           <Input type="text" name="search" placeholder="search" />
 

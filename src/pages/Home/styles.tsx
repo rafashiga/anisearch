@@ -24,8 +24,8 @@ export const Card = styled.div`
     url(${Wallpaper});
   background-size: 100%;
   border-radius: 0.75rem;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 9px 9px 18px #292b2c, -9px -9px 1.2rem #373a3c;
+  box-shadow: 9px 9px 18px #292b2c, -9px -9px 1.2rem #373a3c;
   min-height: 30rem;
 
   display: flex;
@@ -34,7 +34,14 @@ export const Card = styled.div`
 
 export const CardTitle = styled.h1`
   font-size: 1.75rem;
+  font-weight: 900;
   ${gradientColor}
+`;
+
+export const CardSubtitle = styled.h3`
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-grey-2);
 `;
 
 export const CardBody = styled.div`
@@ -56,28 +63,30 @@ export const CardBody = styled.div`
   input {
     display: block;
     width: 100%;
-    background: var(--color-dark);
-    border: 0;
-    padding: 1rem 0 1rem 1rem;
-    border-bottom: 5px solid var(--color-dark);
-    color: #fff;
     margin: 0 0 3rem;
+    background: var(--color-grey-dark-3);
+    border: 2px solid var(--color-dark);
+    border-radius: 0.5rem;
+    padding: 1rem 0 1rem 1rem;
+    color: #fff;
     transition: all 0.2s;
+    font-size: 1.2rem;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.9);
+      color: #7f8489;
+      font-size: 1.2rem;
     }
 
     &:focus {
       outline: 0;
-      border-bottom: 5px solid var(--color-primary);
+      border-bottom: 2px solid var(--color-secondary);
     }
 
     + span {
       width: 100%;
       margin: -2.5rem 1rem 1.5rem;
       text-transform: lowercase;
-      font-weight: 800;
+      font-weight: 900;
       ${gradientColor}
     }
   }
@@ -91,9 +100,16 @@ export const Button = styled.button`
   border: 0;
   color: #fff;
   font-weight: 800;
+  box-shadow: 6px 6px 10px var(--color-dark), -6px -6px 10px var(--color-dark);
   background-image: linear-gradient(
     to right,
     var(--color-primary),
     var(--color-secondary)
   );
+  border: 2px solid var(--color-secondary);
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

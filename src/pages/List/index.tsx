@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { MdClose } from 'react-icons/md';
 import {
   Card,
   CardTitle,
   CardBody,
-  Anime,
+  AnimeInfo,
   CardClose,
   CardHeader,
   PageTitle,
@@ -53,17 +54,17 @@ const List: React.FC<Props> = ({ location }) => {
       <PageTitle>anisearch</PageTitle>
       <Card>
         <CardHeader>
-          <CardTitle>result:</CardTitle>
+          <CardTitle>Result:</CardTitle>
           <CardClose aria-label="close" onClick={handleClose}>
-            X
+            <MdClose color="#7F8489" size={28} />
           </CardClose>
         </CardHeader>
         <CardBody>
           {state?.results?.map((result: Results) => (
-            <Anime key={result.mal_id}>
+            <AnimeInfo key={result.mal_id}>
               <img src={result.image_url} alt={result.title} />
               <h3>{result.title}</h3>
-            </Anime>
+            </AnimeInfo>
           ))}
         </CardBody>
       </Card>

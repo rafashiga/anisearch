@@ -13,60 +13,85 @@ color: transparent;
 
 export const PageTitle = styled.h1`
   text-align: center;
-  font-size: 3rem;
-  margin: -2rem 0 4rem;
+  font-size: 2rem;
+  margin: 0 0 4rem;
   ${titleColor}
+  font-weight: 900;
 `;
 
 export const Card = styled.div`
-  border-radius: 1rem;
-  -webkit-box-shadow: 9px 9px 18px #292b2c, -9px -9px 18px #373a3c;
-  box-shadow: 9px 9px 18px #292b2c, -9px -9px 18px #373a3c;
-  min-height: 18rem;
-  background: var(-color-grey-1);
-  color: var(--color-grey-light);
   padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 9px 9px 18px #292b2c, -9px -9px 18px #373a3c;
+  background: linear-gradient(to right bottom, #2e3138 0.35%, #3d4148);
+  box-shadow: 4px 4px 16px #1f2427;
+
+  @media (min-width: 768px) {
+    min-height: 18rem;
+  }
 `;
 
 export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--color-grey-light);
 `;
 
 export const CardTitle = styled.h1`
   font-size: 1.75rem;
-  margin-bottom: 2rem;
-  ${titleColor}
+  font-weight: 900;
+  color: #7f8489;
 `;
 
 export const CardClose = styled.button`
   background: none;
   border: none;
-  font-size: 2rem;
-  margin-top: -1rem;
-  ${titleColor}
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.75rem;
+  background: linear-gradient(320.66deg, #2f353a 14.75%, #1c1f22 84.81%);
+  box-shadow: 6px 6px 12px #25292e, -6px -6px 12px #33373e;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    opacity: 0.4;
+  }
 `;
 
 export const CardBody = styled(PerfectScrollbar)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem;
-  height: 24rem;
+  padding: 0.5rem 1rem;
+  max-height: 25rem;
+
+  @media (min-width: 768px) {
+    max-height: 18rem;
+  }
 `;
 
-export const Anime = styled.div`
-  padding: 1rem;
+export const AnimeInfo = styled.div`
+  padding: 0 1rem 1rem 1rem;
 
   h3 {
     text-align: center;
     width: 10rem;
     font-size: 1.2rem;
     margin: 0 auto;
+    color: var(--color-grey-2);
   }
 
   img {
-    width: 10rem;
     margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      width: 10rem;
+    }
   }
 `;
