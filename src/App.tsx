@@ -4,6 +4,7 @@ import DefaultLayout from './pages/_layout/default';
 import Routes from './routes';
 import history from './services/history';
 import GlobalStyle from './styles/global';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <DefaultLayout>
         <Routes />
       </DefaultLayout>
+      <Footer />
     </Router>
   );
 };
