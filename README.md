@@ -32,3 +32,4 @@
 - React Router
 - Axios
 - React Icons
+- [Jikan API](https://jikan.moe/)
