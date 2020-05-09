@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdStar } from 'react-icons/md';
 import {
   Card,
   CardTitle,
   CardBody,
+  Anime,
   AnimeInfo,
   CardClose,
   CardHeader,
@@ -43,8 +43,6 @@ interface Results {
 const List: React.FC<Props> = ({ location }) => {
   const { state } = location as any;
 
-  console.log(state);
-
   function handleClose(): void {
     history.push('/');
   }
@@ -60,20 +58,25 @@ const List: React.FC<Props> = ({ location }) => {
           </CardClose>
         </CardHeader>
         <CardBody>
-          {state?.results?.map((result: Results) => (
-            <AnimeInfo key={result.mal_id}>
+          {state?.data?.results?.map((result: Results) => (
+            <Anime key={result.mal_id}>
               <img src={result.image_url} alt={result.title} />
-              <h3>{result.title}</h3>
-            </AnimeInfo>
+              <AnimeInfo>
+                <h3>{result.title}</h3>
+                <p>{result.synopsis}</p>
+                <p>
+                  <strong>episodes:</strong> {result.episodes}
+                </p>
+                <p>
+                  <MdStar color="yellow" size={14} /> {result.score}
+                </p>
+              </AnimeInfo>
+            </Anime>
           ))}
         </CardBody>
       </Card>
     </>
   );
-};
-
-List.propTypes = {
-  location: PropTypes.element.isRequired,
 };
 
 export default List;

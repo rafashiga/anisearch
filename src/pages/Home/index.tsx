@@ -25,7 +25,10 @@ const Home: React.FC = () => {
 
     setLoading(false);
 
-    history.push('/list', response.data);
+    history.push('/list', {
+      data: response.data,
+      search,
+    });
   }
 
   return (

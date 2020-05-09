@@ -73,16 +73,10 @@ export const CardBody = styled(PerfectScrollbar)`
   }
 `;
 
-export const AnimeInfo = styled.div`
+export const Anime = styled.div`
   padding: 0 1rem 1rem 1rem;
-
-  h3 {
-    text-align: center;
-    width: 10rem;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    color: var(--color-grey-2);
-  }
+  width: 30rem;
+  display: flex;
 
   img {
     margin-bottom: 1rem;
@@ -92,6 +86,26 @@ export const AnimeInfo = styled.div`
   @media (min-width: 768px) {
     img {
       width: 10rem;
+    }
+  }
+`;
+
+export const AnimeInfo = styled.div`
+  padding: 0 1rem;
+
+  h3 {
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--color-grey-light);
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: var(--color-grey-2);
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
 `;

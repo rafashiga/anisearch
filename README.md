@@ -1,12 +1,12 @@
 <h1 align="center">
-  <img  src="./assets/img/logo.jpg" alt="logo">
+  <img  src="./src/assets/img/logo.png" alt="logo">
   <br>
   <br>
   anisearch
 </h1>
 
 <h3 align="center">
-<strong>Search an Anime</strong>
+<strong>search for information about your favorite anime</strong>
 </h3>
 
 <p align="center">
@@ -20,7 +20,7 @@
   <a href="#space_invader-technologies">Technologies</a>
   <br>
   <br>
-  <img src="./assets/img/website.png">
+  <img src="./src/assets/img/website.png">
   <br>
   <br>
 </p>
