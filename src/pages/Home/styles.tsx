@@ -1,31 +1,20 @@
 import styled from 'styled-components';
 import Wallpaper from '../../assets/img/wallpaper.jpg';
-
-const gradientColor = `
-background-image: linear-gradient(
-  to right,
-  var(--color-primary),
-  var(--color-secondary)
-);
--webkit-background-clip: text;
-color: transparent;
-`;
+import WallpaperLight from '../../assets/img/wallpaper-light.jpg';
 
 export const Card = styled.div`
-  background: var(--color-grey);
   color: #fff;
   padding: 2rem 3rem;
   background-image: linear-gradient(
       105deg,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.8) 50%,
+      rgba(255, 255, 255, 0.75) 0%,
+      rgba(255, 255, 255, 0.75) 50%,
       transparent 50%
     ),
-    url(${Wallpaper});
+    url(${(props) =>
+      props.theme.title === 'dark' ? Wallpaper : WallpaperLight});
   background-size: 100%;
   border-radius: 0.75rem;
-  -webkit-box-shadow: 9px 9px 18px #292b2c, -9px -9px 1.2rem #373a3c;
-  box-shadow: 9px 9px 18px #292b2c, -9px -9px 1.2rem #373a3c;
   min-height: 30rem;
 
   display: flex;
@@ -35,13 +24,19 @@ export const Card = styled.div`
 export const CardTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: 900;
-  ${gradientColor}
+  background-image: linear-gradient(
+    to right,
+    ${(props) => props.theme.colors.primary},
+    ${(props) => props.theme.colors.secondary}
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 `;
 
 export const CardSubtitle = styled.h3`
   font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-grey-2);
+  font-weight: 600;
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 export const CardBody = styled.div`
@@ -62,15 +57,15 @@ export const CardBody = styled.div`
 
   input {
     display: block;
+    border: none;
     width: 100%;
     margin: 0 0 3rem;
-    background: var(--color-grey-dark-3);
-    border: 2px solid var(--color-dark);
-    border-radius: 0.5rem;
+    background: ${(props) => props.theme.colors.input.background};
     padding: 1rem 0 1rem 1rem;
-    color: #fff;
+    color: ${(props) => props.theme.colors.input.color};
     transition: all 0.2s;
     font-size: 1.2rem;
+    border-bottom: 5px solid transparent;
 
     &::placeholder {
       color: #7f8489;
@@ -79,7 +74,7 @@ export const CardBody = styled.div`
 
     &:focus {
       outline: 0;
-      border-bottom: 2px solid var(--color-secondary);
+      border-bottom: 5px solid ${(props) => props.theme.colors.primary};
     }
 
     + span {
@@ -87,7 +82,6 @@ export const CardBody = styled.div`
       margin: -2.5rem 1rem 1.5rem;
       text-transform: lowercase;
       font-weight: 900;
-      ${gradientColor}
     }
   }
 `;
@@ -100,13 +94,11 @@ export const Button = styled.button`
   border: 0;
   color: #fff;
   font-weight: 800;
-  box-shadow: 6px 6px 10px var(--color-dark), -6px -6px 10px var(--color-dark);
   background-image: linear-gradient(
     to right,
-    var(--color-primary),
-    var(--color-secondary)
+    ${(props) => props.theme.colors.primary},
+    ${(props) => props.theme.colors.secondary}
   );
-  border: 2px solid var(--color-secondary);
   transition: opacity 0.4s;
 
   &:hover {
