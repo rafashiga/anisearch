@@ -13,5 +13,6 @@ export default {
       background: '#f0f0f0',
     },
     card: 'rgba(255, 255, 255, 0.75)',
+    cardBackground: '#e0e0e0',
   },
 };

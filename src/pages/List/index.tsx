@@ -72,6 +72,11 @@ const List: React.FC<Props> = ({ location }) => {
                 <p>
                   <MdStar color="yellow" size={14} /> {result.score}
                 </p>
+                <p>
+                  <a href={result.url} target="_blank">
+                    show more
+                  </a>
+                </p>
               </AnimeInfo>
             </Anime>
           ))}

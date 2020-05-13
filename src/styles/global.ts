@@ -1,3 +1,4 @@
+import { shade } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
@@ -26,6 +27,12 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.secondary};
+
+    &:hover {
+      color: ${(props) => shade(0.2, props.theme.colors.secondary)};
+    }
   }
 
   button {

@@ -15,12 +15,19 @@ export const Card = styled.div`
     ),
     url(${(props) =>
       props.theme.title === 'dark' ? Wallpaper : WallpaperLight});
+  border: 5px solid ${(props) => props.theme.colors.cardBackground};
+  box-shadow: 1px 1px 12px 5px ${(props) => props.theme.colors.cardBackground};
+
   background-size: 100%;
   border-radius: 0.75rem;
   min-height: 30rem;
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.5rem;
+  }
 `;
 
 export const CardTitle = styled.h1`
@@ -38,7 +45,11 @@ export const CardTitle = styled.h1`
 export const CardSubtitle = styled.h3`
   font-size: 1rem;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.text};
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export const CardBody = styled.div`
@@ -84,6 +95,7 @@ export const CardBody = styled.div`
       margin: -2.5rem 1rem 1.5rem;
       text-transform: lowercase;
       font-weight: 900;
+      color: ${(props) => props.theme.colors.danger};
     }
   }
 `;

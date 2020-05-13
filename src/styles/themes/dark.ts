@@ -3,7 +3,7 @@ export default {
   colors: {
     primary: '#bf1363',
     secondary: '#f56476',
-    danger: '#B75D69',
+    danger: '#ff0000',
     dark: '#1A1423',
     light: '#dfbbb1',
     background: '#222',
@@ -13,5 +13,6 @@ export default {
       background: '#333',
     },
     card: 'rgba(0, 0, 0, 0.75)',
+    cardBackground: '#191919',
   },
 };

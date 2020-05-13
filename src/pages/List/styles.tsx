@@ -6,11 +6,21 @@ export const PageTitle = styled.h1`
   font-size: 2rem;
   margin: 0 0 4rem;
   font-weight: 900;
+  background-image: linear-gradient(
+    to right,
+    ${(props) => props.theme.colors.primary},
+    ${(props) => props.theme.colors.secondary}
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 `;
 
 export const Card = styled.div`
   padding: 2rem 3rem;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
+  background: ${(props) => props.theme.colors.cardBackground};
+  border: 5px solid ${(props) => props.theme.colors.cardBackground};
+  box-shadow: 1px 1px 12px 5px ${(props) => props.theme.colors.cardBackground};
 
   @media (min-width: 768px) {
     min-height: 18rem;
@@ -45,10 +55,11 @@ export const CardClose = styled.button`
 
 export const CardBody = styled(PerfectScrollbar)`
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 0.5rem 1rem;
   max-height: 25rem;
+  width: 100%;
 
   @media (min-width: 768px) {
     max-height: 18rem;
@@ -57,17 +68,21 @@ export const CardBody = styled(PerfectScrollbar)`
 
 export const Anime = styled.div`
   padding: 0 1rem 1rem 1rem;
-  width: 30rem;
   display: flex;
 
   img {
     margin-bottom: 1rem;
     border-radius: 10px;
+    width: 50%;
+    height: 50%;
   }
 
   @media (min-width: 768px) {
+    width: 50%;
+
     img {
-      width: 10rem;
+      width: 120px;
+      height: 180px;
     }
   }
 `;
@@ -78,14 +93,10 @@ export const AnimeInfo = styled.div`
   h3 {
     width: 100%;
     font-size: 1.2rem;
-    color: var(--color-grey-light);
     margin-bottom: 4px;
   }
 
   p {
-    color: var(--color-grey-2);
-    text-align: justify;
-
     &:not(:last-child) {
       margin-bottom: 5px;
     }
