@@ -27,9 +27,12 @@
 
 ## :space_invader: Technologies
 
-- ReactJS
+- [ReactJS](https://pt-br.reactjs.org/)
 - Typescript
-- React Router
-- Axios
-- React Icons
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Axios](https://github.com/axios/axios)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Styled components](https://styled-components.com/)
+- [React Switch](https://github.com/markusenglund/react-switch#readme)
 - [Jikan API](https://jikan.moe/)
+- [Yup](https://github.com/jquense/yup)
