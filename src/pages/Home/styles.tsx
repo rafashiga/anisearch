@@ -15,6 +15,8 @@ export const Card = styled.div`
     ),
     url(${(props) =>
       props.theme.title === 'dark' ? Wallpaper : WallpaperLight});
+  background-position: center top;
+  background-size: 100% auto;
   border: 5px solid ${(props) => props.theme.colors.cardBackground};
   box-shadow: 1px 1px 12px 5px ${(props) => props.theme.colors.cardBackground};
 
@@ -27,6 +29,10 @@ export const Card = styled.div`
 
   @media (max-width: 768px) {
     padding: 1rem 1.5rem;
+  }
+
+  @media (min-width: 1424px) {
+    min-height: 40rem;
   }
 `;
 
