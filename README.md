@@ -17,7 +17,8 @@
   <img alt="Last commit" src="https://img.shields.io/github/last-commit/rafashiga/anisearch?style=flat-square">
   <br>
   <br>
-  <a href="#space_invader-technologies">Technologies</a>
+  <a href="#space_invader-technologies">Technologies</a> |
+  <a href="#information_source-how-to-use">How to use</a>
   <br>
   <br>
   <img src="./src/assets/img/website.png">
@@ -36,3 +37,21 @@
 - [React Switch](https://github.com/markusenglund/react-switch#readme)
 - [Jikan API](https://jikan.moe/)
 - [Yup](https://github.com/jquense/yup)
+
+## :information_source: How to use
+
+To run this project you'll need [GIT](https://git-scm.com/), [NodeJS](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed on your computer.
+
+```bash
+# Clone this repository
+$ git clone https://github.com/rafashiga/anisearch.git
+
+# Go into the repository
+$ cd anisearch
+
+# Install dependencies
+$ yarn install
+
+# Run the project
+$ yarn start
+```
