@@ -24,10 +24,10 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <DefaultLayout>
-          <Routes />
+          <Routes toggleTheme={toggleTheme} />
         </DefaultLayout>
+        <Footer />
       </ThemeProvider>
-      <Footer />
     </Router>
   );
 };

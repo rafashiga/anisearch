@@ -60,6 +60,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'react/prop-types': 'off',
   },
   settings: {
     'import/resolver': {

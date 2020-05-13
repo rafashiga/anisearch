@@ -1,14 +1,16 @@
 import styled from 'styled-components';
+
 import Wallpaper from '../../assets/img/wallpaper.jpg';
 import WallpaperLight from '../../assets/img/wallpaper-light.jpg';
 
 export const Card = styled.div`
+  position: relative;
   color: #fff;
   padding: 2rem 3rem;
   background-image: linear-gradient(
       105deg,
-      rgba(255, 255, 255, 0.75) 0%,
-      rgba(255, 255, 255, 0.75) 50%,
+      ${(props) => props.theme.colors.card} 0%,
+      ${(props) => props.theme.colors.card} 50%,
       transparent 50%
     ),
     url(${(props) =>
@@ -104,4 +106,10 @@ export const Button = styled.button`
   &:hover {
     opacity: 0.8;
   }
+`;
+
+export const Switcher = styled.div`
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 `;

@@ -12,5 +12,6 @@ export default {
       color: '#333',
       background: '#f0f0f0',
     },
+    card: 'rgba(255, 255, 255, 0.75)',
   },
 };

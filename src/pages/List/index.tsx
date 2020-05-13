@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import { MdClose, MdStar } from 'react-icons/md';
 import {
   Card,
@@ -42,6 +43,7 @@ interface Results {
 
 const List: React.FC<Props> = ({ location }) => {
   const { state } = location as any;
+  const { colors } = useContext(ThemeContext);
 
   function handleClose(): void {
     history.push('/');
@@ -54,7 +56,7 @@ const List: React.FC<Props> = ({ location }) => {
         <CardHeader>
           <CardTitle>Result:</CardTitle>
           <CardClose aria-label="close" onClick={handleClose}>
-            <MdClose color="#7F8489" size={28} />
+            <MdClose color={colors.text} size={28} />
           </CardClose>
         </CardHeader>
         <CardBody>

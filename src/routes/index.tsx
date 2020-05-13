@@ -3,9 +3,17 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home/index';
 import List from '../pages/List/index';
 
-const Routes: React.FC = () => (
+interface Props {
+  toggleTheme(): void;
+}
+
+const Routes: React.FC<Props> = ({ toggleTheme }) => (
   <Switch>
-    <Route path="/" exact component={Home} />
+    <Route
+      path="/"
+      exact
+      component={() => <Home toggleTheme={toggleTheme} />}
+    />
     <Route path="/list" component={List} />
   </Switch>
 );
