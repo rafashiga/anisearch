@@ -46,11 +46,9 @@ const List: React.FC<Props> = ({ location }) => {
   const { state } = location as any;
   const { colors } = useContext(ThemeContext);
 
-  console.log(location);
-
-  function handleClose(): void {
+  const handleClose = () => {
     history.push('/');
-  }
+  };
 
   return (
     <>
