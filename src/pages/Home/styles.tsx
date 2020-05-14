@@ -22,7 +22,7 @@ export const Card = styled.div`
 
   background-size: 100%;
   border-radius: 0.75rem;
-  min-height: 30rem;
+  height: 12rem;
 
   display: flex;
   align-items: center;
@@ -31,8 +31,8 @@ export const Card = styled.div`
     padding: 1rem 1.5rem;
   }
 
-  @media (min-width: 1624px) {
-    min-height: 40rem;
+  @media (min-width: 1424px) {
+    height: 40rem;
   }
 `;
 
