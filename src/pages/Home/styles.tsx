@@ -31,7 +31,7 @@ export const Card = styled.div`
     padding: 1rem 1.5rem;
   }
 
-  @media (min-width: 1424px) {
+  @media (min-width: 1624px) {
     min-height: 40rem;
   }
 `;
