@@ -7,6 +7,7 @@ export const Card = styled.div`
   position: relative;
   color: #fff;
   padding: 2rem 3rem;
+  background-size: cover;
   background-image: linear-gradient(
       105deg,
       ${(props) => props.theme.colors.card} 0%,
@@ -16,11 +17,8 @@ export const Card = styled.div`
     url(${(props) =>
       props.theme.title === 'dark' ? Wallpaper : WallpaperLight});
   background-position: center top;
-  background-size: cover;
   border: 5px solid ${(props) => props.theme.colors.cardBackground};
   box-shadow: 1px 1px 12px 5px ${(props) => props.theme.colors.cardBackground};
-
-  background-size: 100%;
   border-radius: 0.75rem;
   min-height: 30rem;
 
