@@ -4,7 +4,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 export const PageTitle = styled.h1`
   text-align: center;
   font-size: 2rem;
-  margin: 0 0 4rem;
+  margin: 0 0 2rem;
   font-weight: 900;
   background-image: linear-gradient(
     to right,
@@ -13,6 +13,10 @@ export const PageTitle = styled.h1`
   );
   -webkit-background-clip: text;
   color: transparent;
+
+  @media (min-width: 768px) {
+    margin: 0 0 4rem;
+  }
 `;
 
 export const Card = styled.div`
@@ -21,9 +25,10 @@ export const Card = styled.div`
   background: ${(props) => props.theme.colors.cardBackground};
   border: 5px solid ${(props) => props.theme.colors.cardBackground};
   box-shadow: 1px 1px 12px 5px ${(props) => props.theme.colors.cardBackground};
+  height: 20rem;
 
   @media (min-width: 768px) {
-    min-height: 18rem;
+    height: 24rem;
   }
 `;
 
@@ -73,16 +78,16 @@ export const Anime = styled.div`
   img {
     margin-bottom: 1rem;
     border-radius: 10px;
-    width: 50%;
-    height: 50%;
+    width: 100px;
+    height: 180px;
   }
 
   @media (min-width: 768px) {
     width: 50%;
 
     img {
-      width: 120px;
-      height: 180px;
+      width: 30%;
+      height: auto;
     }
   }
 `;
