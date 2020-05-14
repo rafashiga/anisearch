@@ -20,7 +20,7 @@ export const PageTitle = styled.h1`
 `;
 
 export const Card = styled.div`
-  padding: 2rem 3rem;
+  padding: 1rem;
   border-radius: 1rem;
   background: ${(props) => props.theme.colors.cardBackground};
   border: 5px solid ${(props) => props.theme.colors.cardBackground};
@@ -28,6 +28,7 @@ export const Card = styled.div`
   height: 20rem;
 
   @media (min-width: 768px) {
+    padding: 2rem 3rem;
     height: 24rem;
   }
 `;
@@ -39,8 +40,13 @@ export const CardHeader = styled.div`
 `;
 
 export const CardTitle = styled.h1`
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   font-weight: 900;
+`;
+
+export const CardSubtitle = styled.h3`
+  font-size: 1rem;
+  font-weight: 500;
 `;
 
 export const CardClose = styled.button`
@@ -62,12 +68,13 @@ export const CardBody = styled(PerfectScrollbar)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0.5rem 1rem;
-  max-height: 25rem;
+  margin-top: 1rem;
+  max-height: 12rem;
   width: 100%;
 
   @media (min-width: 768px) {
-    max-height: 18rem;
+    padding: 2rem;
+    max-height: 16rem;
   }
 `;
 

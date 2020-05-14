@@ -57,7 +57,9 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
         <Form schema={schema} onSubmit={handleSubmit}>
           <Input type="text" name="search" placeholder="search" />
 
-          <Button type="submit">{loading ? 'loading...' : 'search'}</Button>
+          <Button type="submit" disabled={loading}>
+            {loading ? 'loading...' : 'search'}
+          </Button>
         </Form>
         <Switcher>
           <Switch

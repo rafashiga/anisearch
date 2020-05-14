@@ -4,6 +4,7 @@ import { MdClose, MdStar } from 'react-icons/md';
 import {
   Card,
   CardTitle,
+  CardSubtitle,
   CardBody,
   Anime,
   AnimeInfo,
@@ -45,6 +46,8 @@ const List: React.FC<Props> = ({ location }) => {
   const { state } = location as any;
   const { colors } = useContext(ThemeContext);
 
+  console.log(location);
+
   function handleClose(): void {
     history.push('/');
   }
@@ -54,7 +57,10 @@ const List: React.FC<Props> = ({ location }) => {
       <PageTitle>anisearch</PageTitle>
       <Card>
         <CardHeader>
-          <CardTitle>Result:</CardTitle>
+          <div>
+            <CardTitle>results for:</CardTitle>
+            <CardSubtitle>{state?.search}</CardSubtitle>
+          </div>
           <CardClose aria-label="close" onClick={handleClose}>
             <MdClose color={colors.text} size={28} />
           </CardClose>

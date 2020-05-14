@@ -122,6 +122,10 @@ export const Button = styled.button`
   &:hover {
     opacity: 0.8;
   }
+
+  &:disabled {
+    opacity: 0.8;
+  }
 `;
 
 export const Switcher = styled.div`
