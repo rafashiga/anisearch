@@ -16,7 +16,7 @@ export const Card = styled.div`
     url(${(props) =>
       props.theme.title === 'dark' ? Wallpaper : WallpaperLight});
   background-position: center top;
-  background-size: 100% auto;
+  background-size: cover;
   border: 5px solid ${(props) => props.theme.colors.cardBackground};
   box-shadow: 1px 1px 12px 5px ${(props) => props.theme.colors.cardBackground};
 
