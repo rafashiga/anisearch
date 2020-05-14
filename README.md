@@ -24,6 +24,9 @@
   <img src="./src/assets/img/website.png">
   <br>
   <br>
+  <a href="https://anisearch.netlify.app/" target="_blank">
+    <img src="./src/assets/img/button-visit.png">
+  </a>
 </p>
 
 ## :space_invader: Technologies
